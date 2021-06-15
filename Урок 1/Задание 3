@@ -1,0 +1,8 @@
+Здесь будет 3 задание 1 урока
+print('Как вас зовут?')
+name = input()
+print('Как ваша фамилия?')
+fio = input()
+print('Как ваше отчество?')
+last_name = input()
+print('Привет', fio, name, last_name)
