@@ -1,1 +1,7 @@
 Здесь будет решение задания 1 из урока 1
+(1 пункт)
+print('Glo', 'Academy')
+print('Glo Academy')
+print('Glo', 'Academy', sep=' ')
+(2 пункт)
+print('Glo Academy')
