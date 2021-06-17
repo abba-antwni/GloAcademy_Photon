@@ -2,7 +2,9 @@
 Например:
 Если введем два числа 3 и 5, то надо вывести 34.
 
-a = int(input())
-b = int(input())
-summ = ((a**2) + (b**2))
+print("Введи первое число:", end=' ')
+first = int(input())
+print("Введи второе число:", end=' ')
+two= int(input())
+summ = ((first**2) + (two**2))
 print(summ,"Сумма квадратов")
