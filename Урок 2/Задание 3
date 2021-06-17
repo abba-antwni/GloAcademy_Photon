@@ -6,8 +6,8 @@
 Сумма цифр числа 253 равна 10
 Произведение цифр числа 253 равно 30
 
-input("Введите трехзначное число число: ")
-a = int(input())
-summ = ((a // 100) + (a // 10 % 10) + (a % 10))
-produced = ((a // 100) * (a // 10 % 10) * (a % 10))
+print('Введите первое число: ', end='')
+wholeNum = int(input())
+summ = ((wholeNum // 100) + (wholeNum // 10 % 10) + (wholeNum % 10))
+produced = ((wholeNum // 100) * (wholeNum // 10 % 10) * (wholeNum % 10))
 print("Сумма:,", summ, "Произведение:", produced)
