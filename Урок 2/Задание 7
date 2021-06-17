@@ -6,16 +6,16 @@
 У числа 14263584 сумма последних трех цифр равна 17
 
 input("Введи число не больше 100000000")
-a = int(input())
-one = a // 1000000000
-two = a // 100000000 % 10
-three = a // 10000000 % 10
-four = a // 1000000 % 10
-five = a // 100000 % 10
-six = a // 10000 % 10
-seven = a // 1000 % 10
-nine = a // 100 % 10
-ten = a // 10 % 10
-eleven = a % 10
+natural_number = int(input())
+one = natural_number // 1000000000
+two = natural_number // 100000000 % 10
+three = natural_number // 10000000 % 10
+four = natural_number // 1000000 % 10
+five = natural_number // 100000 % 10
+six = natural_number // 10000 % 10
+seven = natural_number // 1000 % 10
+nine = natural_number // 100 % 10
+ten = natural_number // 10 % 10
+eleven = natural_number % 10
 summ = nine + ten + eleven
-print("У числа", a, "сумма последних трех цифрравна", summ)
+print("У числа", natural_number, "сумма последних трех цифрравна", summ)
