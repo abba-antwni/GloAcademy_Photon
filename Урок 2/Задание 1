@@ -4,4 +4,5 @@
 
 a = int(input())
 b = int(input())
-print((a**2) + (b**2))
+summ = ((a**2) + (b**2))
+print(summ,"Сумма квадратов")
