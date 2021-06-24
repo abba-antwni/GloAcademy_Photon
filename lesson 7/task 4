@@ -1,13 +1,14 @@
+Даны два целых числа a и b. Напишите программу, которая выводит все ЧЕТНЫЕ числа на данном промежутке в возрастающем порядке, включая a и b.
+
 print("Введи первое число:", end='')
 fignt = int(input())
 print("Введи последнее число:", end='')
 last = int(input())
 if fignt < last:
     for i in range(fignt, last):
-        if number % 2 == 0:
-            print(i)
+            if number % 2 == 0:
+                print(i)
     else:
         for i in range(last, fignt):
-            number=int(input())
             if number % 2 == 0:
-                    print(i)
+                print(i)
