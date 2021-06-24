@@ -1,0 +1,13 @@
+print("Введи первое число:", end='')
+fignt = int(input())
+print("Введи последнее число:", end='')
+last = int(input())
+if fignt < last:
+    for i in range(fignt, last):
+        if number % 2 == 0:
+            print(i)
+    else:
+        for i in range(last, fignt):
+            number=int(input())
+            if number % 2 == 0:
+                    print(i)
