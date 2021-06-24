@@ -3,7 +3,7 @@
 
 print('Введи электронную почту:', end='')
 text = input()
-if '@.' in text:
+if '@' in text and '.' in text:
     print('YES')
 else:
     print('NO')
