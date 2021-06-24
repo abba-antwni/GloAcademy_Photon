@@ -4,6 +4,10 @@ print("Введи первое число:", end='')
 fignt = int(input())
 print("Введи последнее число:", end='')
 last = int(input())
-for i in range(fignt, last):
-        print(i)
-print(last)
+if fignt < last:
+        for i in range(fignt, last):
+                print(i)
+else:
+        for i in range(last, fignt):
+                print(i)
+print(max(fignt, last))
