@@ -3,3 +3,18 @@
 Напишите программу, которая выводит наибольшее и наименьшее число из введенной последовательности. 
 
 
+if number >= 2:
+    # сравнивать в программе между собой
+    flag_max = flag_min = int(input())  # первое число последовательности
+    for i in range(number-1):
+        number_next = int(input())
+        if flag_min >= number_next:  # введенное меньше минимума
+            flag_min = number_next
+        elif flag_max <= number_next:  # если условие не выполняется 1 (или)
+            flag_max = number_next
+print('Максимум равен', flag_max)
+print('Минимум равен', flag_min)
+
+        
+        
+        
