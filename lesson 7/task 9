@@ -4,11 +4,9 @@
 
 
 number = int(input())
-# сравнивать в программе между собой
-# flag_max = flag_min = int(input())  # первое число последовательности для проверки
-for i in range(number-1):  # работа цикла (-1 так как объява)
+for i in range(number-1): 
     number_next = int(input())
-    if number % 2 == 0 or number_next % 2 == 0:  # проверка четности
+    if number % 2 == 0 or number_next % 2 == 0:  
         even = 'Yes'
 if even != 'Yes':
     even = 'No'
