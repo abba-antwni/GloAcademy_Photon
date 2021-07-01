@@ -5,7 +5,7 @@ number = int(input())
 next_number = number//1000
 next_number_1 = number//100 % 100
 next_number_2 = number//10 % 10
-next_number_end = number//10 % 10
+next_number_end = number % 10
 summ = next_number+next_number_1+next_number_2+next_number_end
 if number % summ == 0:
     print('Yes')
