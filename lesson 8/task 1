@@ -1,1 +1,8 @@
+Вводится натуральное число a. Определите сколько раз a делится на 2 нацело (без остатка).
 
+number = int(input())
+flag = 0
+while (number % 2 == 0):
+    number = number/2
+    flag = flag + 1
+print(flag)
