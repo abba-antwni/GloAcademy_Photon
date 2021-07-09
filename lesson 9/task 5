@@ -1,0 +1,8 @@
+Выведите следующее с помощью вложенных циклов:
+
+n = int(input())
+for j in range(7):
+    for i in range(6):
+        print(n, end=' ')
+
+    print()
