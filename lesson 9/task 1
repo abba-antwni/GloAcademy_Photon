@@ -5,12 +5,10 @@
 в остальных случаях вывести это число обратно на консоль в отдельной строке.
 Примечание: гарантируется, что число больше 100 точно встречается!
 
-n = int(input())
-for i in range(n):
+while True:
     number = int(input())
     if number < 10:
         continue
     if number > 100:
         break
-print(number)
-
+    print(number)
