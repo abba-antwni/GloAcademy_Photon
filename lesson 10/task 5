@@ -1,0 +1,13 @@
+Даны две строчные буквы латинского алфавита.
+Выведите на одной строке через пробел все строчные буквы латинского алфавита в алфавитном порядке, которые находятся между данными символами, а также их самих.
+
+print('введи 1 букву', end=' ')
+letter = input()
+print('введи 2 букву', end=' ')
+letter2 = input()
+if ord(later) <= ord(letter2):
+    for i in range(ord(latter), ord(latter2) + 1):
+        print(i, end=' ')
+else:
+    for i in range(ord(latter2), ord(latter) + 1):
+        print(i, end=' ')
