@@ -1,0 +1,9 @@
+Определите, является ли введенный символ заглавной буквой русского алфавита.
+
+letter = input()
+#print(ord(letter)) вывод кода
+number = ord(letter)
+if 1040 <= number <= 1103:
+    print('Yes')
+else:
+    print('No')
