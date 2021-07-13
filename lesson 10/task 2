@@ -1,0 +1,9 @@
+Определите является ли данный символ цифрой или нет.
+
+number = int(input())
+if 65 <= number <= 90:
+    print('No')
+elif 97 <= number <= 122:
+    print('No')
+else:
+    print('Yes')
