@@ -2,10 +2,12 @@
 Символы, не являющиеся латинской буквой нужно оставить без изменения.
 
 letter = input()
-# print(ord(letter)) вывод кода
 number = ord(letter)
-# for i in range(ord('a'), ord('z')+1):
-if number <= 1040:
+if ord('a') <= number <= ord('z'):
+    letter = letter.upper()
     print(letter)
+elif ord('A') <= number <= ord('Z'):
+    letter = letter.lower()
+    print(letter)    
 else:
-    print(letter.lower())
+    print(letter)
