@@ -2,7 +2,7 @@
 
 letter = input()
 number = ord(letter)
-if ord('0') <= number <= ord('9'):
+if ord('А') <= number <= ord('Я'):
     print("yes")
 else:
     print("no")
