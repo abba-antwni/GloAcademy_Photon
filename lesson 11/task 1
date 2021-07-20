@@ -5,15 +5,15 @@
 
 
 print("Число строк:")
-n = int(input())
-strings = []
-for it in range(n):
-    print("Введите строку (" + str(it + 1) + "):")
-    strings.append(input())
+n = int(input())  # вводим количество строк
+archiv = []  # вводим список "архив"
+for i in range(n):  # цикл для вывода количества строк
+    print("Введите (" + str(i+1)+"):")  # добавление
+    archiv.append(input())  # добавление в конец списка
 print("Введите поиск:")
 query = input()
-for word in strings:
-    if query.lower in word:
+for word in archiv:  # ищем
+    if query.lower() in word.lower():
         print(word)
 
 
