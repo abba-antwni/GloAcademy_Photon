@@ -23,9 +23,9 @@ b = int(input())
 d1 = []
 d2 = []
 for i in range(1, b + 1):
-s = input()
-d1.append(s)
-f = input()
+    s = input()
+    d1.append(s)
+    f = input()
 for j in range(0, len(d1)):
-if f.upper() in d1[j].upper(): # нужно использовать функцию .lower() или .upper()
-print(d1[j])
+        if f.upper() in d1[j].upper(): 
+            print(d1[j])
