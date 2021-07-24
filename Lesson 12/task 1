@@ -1,10 +1,11 @@
-def number_rank(n):  # Возведение в степень
+def number_rank(n):
 # n=int(input())
     count = 1
     n //= 10  # n=n//10
     while n > 0:
         n //= 10
         count += 1  # count+1=count
+    return count
 #print("Разрядов:", count)
 def sum_digits(number):  # Вычисленние суммы чисел
     total = 0
@@ -13,6 +14,7 @@ def sum_digits(number):  # Вычисленние суммы чисел
         number = number // 10
 
     return total
+
 print('введи первое число:')
 a = int(input())
 print('введи второе число:')
