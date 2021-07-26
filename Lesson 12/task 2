@@ -1,0 +1,20 @@
+Напишите функцию для нахождения максимального элемента списка.
+Необходимо вычислить произведение двух максимальных элементов списков a и b.
+На первой строке вводятся элементы первого списка через пробел.
+На второй строке вводятся элементы второго списка через пробел.
+
+
+def search_max(list):
+    max_list = 0
+    for i in range(len(list)):
+        if max_list < int(list[i]):
+            max_list = int(list[i])
+    return max_list
+
+number_list_1 = input('Введите число: ').split(" ")
+number_list_2 = input('Введите число: ').split(" ")
+
+
+max_size_1 = search_max(number_list_1)
+max_size_2 = search_max(number_list_2)
+print(max_size_1 * max_size_2)
