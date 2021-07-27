@@ -16,11 +16,11 @@ def is_valid(user_input):
     
 secret_number = random.randint(1, 100)
 print('Добро пожаловать в игру "Угадай число"')
-
+count = 0
 while True:
     print('Введите число от 1 до 100')
     user_input = input()
-
+    count = count + 1
     if not is_valid(user_input):
         continue
 
@@ -32,4 +32,5 @@ while True:
         print('Загаданное число меньше, чем введенное вами число')
     else:
         print('Ура! Вы угадали число')
+        print(count)
         break  # Выход из цикла
