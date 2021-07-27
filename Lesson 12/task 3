@@ -9,6 +9,9 @@ def number_month(m):
             print(30)
         else:
             print(28)
+    else:
+        print('Не угадал с числом')
 print(' Введи число:', end=' ')
 date = int(input())
 mount = number_month(date)
+
