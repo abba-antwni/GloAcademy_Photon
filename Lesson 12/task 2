@@ -11,8 +11,8 @@ def search_max(list):
             max_list = int(list[i])
     return max_list
 
-number_list_1 = input('Введите число: ').split(" ")
-number_list_2 = input('Введите число: ').split(" ")
+number_list_1 = input('Введите числа: ').split(" ")
+number_list_2 = input('Введите числа: ').split(" ")
 
 
 max_size_1 = search_max(number_list_1)
