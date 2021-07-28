@@ -5,31 +5,34 @@ import random  # Подключение библиотеки
 def is_valid(user_input):
     if user_input.isdigit():
         user_number = int(user_input)
-        if user_number >= 1 and user_number <= 100:  # условие диапазона
+        if user_number >= 1 and user_number <= n:  # условие диапазона
             return True
         else:
             return False
     else:
         return False
-    
-secret_number = random.randint(1, 100)
+play = 'n'
 print('Добро пожаловать в игру "Угадай число"')
-count = 0
-while True:
-    print('Введите число от 1 до 100')
-    user_input = input()
-    count = count + 1
-    if not is_valid(user_input):
-        continue
+while play != 'y':
+    n = int(input('Введите границу: '))
+    secret_number = random.randint(1, n)
 
-    user_number = int(user_input)
+    count = 0
+    while True:
+        print('Введите число от 1 до ', n)
+        user_input = input()
+        count = count + 1
+        if not is_valid(user_input):
+            continue
 
-    if secret_number > user_number:
-        print('Загаданное число больше, чем введенное вами число')
-    elif secret_number < user_number:
-        print('Загаданное число меньше, чем введенное вами число')
-    else:
-        print('Ура! Вы угадали число')
-        print(count)
-        break  # Выход из цикла
-play = input('Сыграем еще раз? (y/n): ')
+        user_number = int(user_input)
+
+        if secret_number > user_number:
+            print('Загаданное число больше, чем введенное вами число')
+        elif secret_number < user_number:
+            print('Загаданное число меньше, чем введенное вами число')
+        else:
+            print('Ура! Вы угадали число')
+            print(count)
+            break  # Выход из цикла
+    play = input('Сыграем еще раз? (y/n): ')
