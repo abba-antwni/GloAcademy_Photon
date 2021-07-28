@@ -11,25 +11,28 @@ def is_valid(user_input):
             return False
     else:
         return False
-n = int(input('Введите границу: '))
-secret_number = random.randint(1, n)
+play = 'n'
 print('Добро пожаловать в игру "Угадай число"')
-count = 0
-while True:
-    print('Введите число от 1 до ', n)
-    user_input = input()
-    count = count + 1
-    if not is_valid(user_input):
-        continue
+while play != 'y':
+    n = int(input('Введите границу: '))
+    secret_number = random.randint(1, n)
 
-    user_number = int(user_input)
+    count = 0
+    while True:
+        print('Введите число от 1 до ', n)
+        user_input = input()
+        count = count + 1
+        if not is_valid(user_input):
+            continue
 
-    if secret_number > user_number:
-        print('Загаданное число больше, чем введенное вами число')
-    elif secret_number < user_number:
-        print('Загаданное число меньше, чем введенное вами число')
-    else:
-        print('Ура! Вы угадали число')
-        print(count)
-        break  # Выход из цикла
-play = input('Сыграем еще раз? (y/n): ')
+        user_number = int(user_input)
+
+        if secret_number > user_number:
+            print('Загаданное число больше, чем введенное вами число')
+        elif secret_number < user_number:
+            print('Загаданное число меньше, чем введенное вами число')
+        else:
+            print('Ура! Вы угадали число')
+            print(count)
+            break  # Выход из цикла
+    play = input('Сыграем еще раз? (y/n): ')
