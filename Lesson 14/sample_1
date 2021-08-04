@@ -1,0 +1,63 @@
+import random
+print('Привет. Я генератор паролей. Я задам пару уточняющих вопросов, на основе которых сгенерирую пароль. Давай начнем')
+
+print('Введите длинну пароля')
+length = int(input())  # Длинна
+
+print('Включать ли цифры? Да/Нет')
+digits_enabled = input()  # Цифры
+
+print('Включать ли строчные латинские буквы? Да/Нет')
+latin_lowercase_enabled = input()  # Строчные латинские
+
+print('Включать ли заглавные латинские буквы? Да/Нет')
+latin_uppercase_enabled = input()  # Заглавные латинские
+
+print('Включать ли строчные русские буквы? Да/Нет')
+russian_lowercase_enabled = input()  # Строчные русские
+
+print('Включать ли заглавные русские буквы? Да/Нет')
+russian_uppercase_enabled = input()  # Загланые русские
+
+print('Включать ли знаки пунктуации? Да/Нет')
+punctuation_enabled = input()  # Пунктуация
+
+enabled_chars = ''  # условная строка
+
+digits = '0123456789'
+latin_lowercase_letters = 'abcdefzhiklmnopqrstvx'
+latin_uppercase_letters = 'ABCDEFZHIKLMNOPQRSTVX'
+russian_lowercase_letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+russian_uppercase_letters = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+punctuation = ' !#$%&*+-=@^_'
+
+if digits_enabled == 'Да':  # условная строка да
+    enabled_chars += digits  # добавляются еще и цифры
+
+if latin_lowercase_enabled == 'Да':  # Строчные латинские да
+    # добавляются еще и латинских маленьких
+    enabled_chars += latin_lowercase_letters
+
+if latin_uppercase_enabled == 'Да':  # Заглавные латинские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += latin_lowercase_letters
+
+if russian_lowercase_enabled == 'Да':  # Строчные русские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += russian_lowercase_letters
+
+if russian_uppercase_enabled == 'Да':  # Загланые русские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += russian_lowercase_letters
+
+if punctuation_enabled == 'Да':  # Загланые русские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += punctuation
+
+password = ''  # Результат сгенерированного пароля
+for i in range(length):  # смотрим длинну пароля
+    # Генерация индекса символа возможные от 0 до длинны строки (тк индекс -1)
+    random_insex = random.randint(0, len(enabled_chars)-1)
+    password += enabled_chars[random_insex]  # Добавление по индексу
+
+print(password)
