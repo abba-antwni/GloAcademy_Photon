@@ -1,0 +1,69 @@
+import random
+
+def ask_question(question):
+    print(question, 'Нажмите Да или Нет')
+    answer = input()  # Строчные латинские
+    if answer == 'Да':
+        return True
+    else:
+        return False
+    
+def generate_password(length, chars):  # принимает длинну и возможные символы
+    password = ''  # Результат сгенерированного пароля
+    for i in range(length):  # смотрим длинну пароля
+        # Генерация индекса символа возможные от 0 до длинны строки (тк индекс -1)
+        random_insex = random.randint(0, len(chars) - 1)
+        password += chars[random_insex]  # Добавление по индексу
+        
+    return password
+    
+print('Привет. Я генератор паролей.\n Я задам пару уточняющих вопросов, на основе которых сгенерирую пароль.\n Давай начнем')
+
+print('Введите длинну пароля')
+length = int(input())  # Длинна
+
+digits_enabled = ask_question('Включать ли цифры?')  # Цифры
+
+latin_uppercase_enabled = ask_question('Включать ли заглавные латинские буквы?')  # Заглавные латинские
+
+russian_lowercase_enabled = ask_question('Включать ли строчные русские буквы?')  # Строчные русские
+
+russian_uppercase_enabled = ask_question('Включать ли заглавные русские буквы?')  # Загланые русские
+
+punctuation_enabled = ask_question('Включать ли знаки пунктуации?')  # Пунктуация
+
+enabled_chars = ''  # условная строка
+
+digits = '0123456789'
+latin_lowercase_letters = 'abcdefzhiklmnopqrstvx'
+latin_uppercase_letters = 'ABCDEFZHIKLMNOPQRSTVX'
+russian_lowercase_letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+russian_uppercase_letters = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+punctuation = ' !#$%&*+-=@^_'
+
+if digits_enabled:  # условная строка да
+    enabled_chars += digits  # добавляются еще и цифры
+
+if latin_lowercase_enabled:  # Строчные латинские да
+    # добавляются еще и латинских маленьких
+    enabled_chars += latin_lowercase_letters
+
+if latin_uppercase_enabled:  # Заглавные латинские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += latin_lowercase_letters
+
+if russian_lowercase_enabled:  # Строчные русские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += russian_lowercase_letters
+
+if russian_uppercase_enabled:  # Загланые русские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += russian_lowercase_letters
+
+if punctuation_enabled:  # Загланые русские да
+    # добавляются еще и латинских маленьких в условную строку
+    enabled_chars += punctuation
+
+password = generate_password(length, enabled_chars)
+
+print(password)
