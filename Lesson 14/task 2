@@ -3,7 +3,7 @@ import random
 def ask_question(question):
     print(question, 'Нажмите Да или Нет')
     answer = input()  # Строчные латинские
-    if answer == 'Да':
+    if answer == 'Да' or answer == 'да':
         return True
     else:
         return False
@@ -69,6 +69,6 @@ for i in range(n):
                 # добавляются еще и латинских маленьких в условную строку
         enabled_chars += punctuation
 
-        password = generate_password(length, enabled_chars)
+    password = generate_password(length, enabled_chars)
 
-        print(password)
+    print(password)
