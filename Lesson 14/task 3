@@ -6,13 +6,13 @@ import random
 def ask_question(question):
     print(question, 'Нажмите Да или Нет')
     answer = input()  # Строчные латинские
-    if answer == 'Да':
+    if answer == 'Да' or answer == 'да':
         return True
-    elif answer == 'Нет':
+    elif answer == 'Нет' or answer=='нет':
         return False
     else:
         ask_question(question)
-        
+
 
 def generate_password(length, chars):  # принимает длинну и возможные символы
     password = ''  # Результат сгенерированного пароля
@@ -30,7 +30,7 @@ print('Введите длинну пароля')
 length = int(input())  # Длинна
 
 digits_enabled = ask_question('Включать ли цифры?')  # Цифры
-    
+
 latin_lowercase_enabled = ask_question('Включать ли заглавные латинские буквы?')  # Строчные латинские
 
 latin_uppercase_enabled = ask_question('Включать ли заглавные латинские буквы?')  # Заглавные латинские
@@ -76,6 +76,6 @@ for i in range(n):
                 # добавляются еще и латинских маленьких в условную строку
         enabled_chars += punctuation
 
-        password = generate_password(length, enabled_chars)
+    password = generate_password(length, enabled_chars)
 
-        print(password)
+    print(password)
