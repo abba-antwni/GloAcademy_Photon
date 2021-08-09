@@ -4,14 +4,14 @@
 import random
 
 def ask_question(question):
-    print(question, 'Нажмите Да или Нет')
-    answer = input()  # Строчные латинские
-    if answer == 'Да' or answer == 'да':
-        return True
-    elif answer == 'Нет' or answer=='нет':
-        return False
-    else:
-        ask_question(question)
+    while True:
+        print(question, 'Нажмите Да или Нет')
+        answer = input()  # Строчные латинские
+        if answer == 'Да' or answer == 'да':
+            return True
+        elif answer == 'Нет' or answer == 'нет':
+            return False
+        print('Неверный ввод. Нужно ввести Да или Нет')
 
 
 def generate_password(length, chars):  # принимает длинну и возможные символы
