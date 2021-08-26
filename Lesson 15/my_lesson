@@ -1,0 +1,24 @@
+Задается текст. После проверяется кроссворд
+
+def getIsLetterInWord(letter, word, word_star):
+    x=False
+    for i in range(len(word)): 
+        if word[i]==letter: #если элемент равен букве
+            word_star[i]=letter # буква присваивается второму слову
+            x=True
+    return x # возврат   
+
+# Ввод слова
+print ('Ввод слова:', end=' ')
+word=list(input())
+summ_word=len(word)
+word_star=list(summ_word*'*')
+#print('Введи букву:', end=' ')
+# проверка
+while " ".join(word)!=" ".join(word_star): # работает пока не сравняется
+    print('Введи букву:', end=' ')
+    letter=input()
+    x=getIsLetterInWord(letter, word, word_star)
+    print(''.join(word_star))
+    # проверка элементов    
+print('Все угадал')
